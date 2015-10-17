@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Add Binary/src"/>
+	<classpathentry kind="src" path="Climb Stairs/src"/>
+	<classpathentry kind="src" path="Divide Two Integers/src"/>
+	<classpathentry kind="src" path="Jump Game/src"/>
+	<classpathentry kind="src" path="Maximum Subarray/src"/>
+	<classpathentry kind="src" path="Permutation 2/src"/>
+	<classpathentry kind="src" path="Permutation/src"/>
+	<classpathentry kind="src" path="Unique Paths_2/src"/>
+	<classpathentry kind="src" path="Unique Paths/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Unique Paths_2/bin"/>
+</classpath>

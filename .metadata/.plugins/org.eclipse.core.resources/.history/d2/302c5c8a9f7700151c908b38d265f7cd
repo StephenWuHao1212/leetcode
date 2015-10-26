@@ -1,0 +1,45 @@
+/*
+	Given a set of distinct integers, nums, return all possible subsets.
+
+	Note:
+	Elements in a subset must be in non-descending order.
+	The solution set must not contain duplicate subsets.
+	For example,
+	If nums = [1,2,3], a solution is:
+	
+	[
+	  [3],
+	  [1],
+	  [2],
+	  [1,2,3],
+	  [1,3],
+	  [2,3],
+	  [1,2],
+	  []
+	]
+	
+	Solution: backtracing
+	sort the nums array to be in non-descending order
+	helper(List currentList, List remainingNumbers, List<List> ans)
+		- if the remainingNumbers is empty.
+			- add the currentList to ans
+			- return
+		- add the first number from the remainingNumbers to the currentList
+		- remove that number from the remainingNumber list
+		- helper(cuurentList, remainingNumbers, ans)
+ */
+import java.util.*;
+public class Solution {
+    public static List<List<Integer>> subsets(int[] nums) {
+        
+    }
+    public static helper(LinkedList<Integer> currentList, LinkedList<Integer> remainingNumbers, List<List<Integer>> ans){
+    	if(remainingNumbers.isEmpty()){
+    		ans.add(currentList);
+    		return ans;
+    	}
+    	else(remainingNumbers.size() == 1){
+    		ans.add(currentList.add(remainingNumbers.))
+    	}
+    }
+}

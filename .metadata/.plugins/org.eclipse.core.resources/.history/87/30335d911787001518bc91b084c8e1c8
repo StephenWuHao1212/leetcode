@@ -1,0 +1,16 @@
+/*
+	Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+ */
+
+
+
+
+public class Solution {
+	public class ListNode {
+		int val;
+		ListNode next;
+		ListNode(int x) { val = x; }
+	}
+	public ListNode mergeKLists(ListNode[] lists) {
+	}
+}

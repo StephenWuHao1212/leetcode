@@ -1,0 +1,12 @@
+/*
+	return the index of the two minimum number in a unsorted array
+*/
+
+import java.util.*;
+import java.util.Map.Entry;
+public class Solution{
+	public static int[] minimumNumberInUnsortedArray(int[] nums){
+		//<number, index>
+		LinkedList<Entry<Integer, Integer>> list = new Li
+	}
+}

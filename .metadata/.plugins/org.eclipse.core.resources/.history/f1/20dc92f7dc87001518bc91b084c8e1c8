@@ -1,0 +1,19 @@
+/*
+
+a m by n matrix, print every paths from the left top corner to the right bottom corner
+only go down or right for every step
+
+
+dynamic programming
+
+*/
+
+import java.util.*;
+public class Solution{
+	public static List<List<Integer>> printPaths(int[][] matrix){
+		int m = matrix.length;
+		int n = matrix[0].length;
+		List<List<Integer>>[][] path = new LinkedList<List<Integer>>[m][n];
+	}
+	
+}

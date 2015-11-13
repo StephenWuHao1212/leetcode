@@ -1,0 +1,30 @@
+/*
+2. 添数游戏。给两个数比如 30, 25 后面添加数字要满足三个条件
+1. > 0
+2. 已有的数字的差
+3. 不能重复.
+比如 30 25，下一个是5， 再下一个是20（因为25已经有了）， 再下一个是10或者20， etc。。。一直到不能填为止
+输出所有的可能的结果
+
+*/
+import java.util.*;
+public class Solution{
+	public static int[] InputGame(int a, int b){
+		Set<Integer> result = new HashSet<Integer>();
+		LinkedList<Integer> diff = new LinkedList<Integer>();
+		result.add(a);
+		result.add(b);
+		diff.add(Math.abs(a - b));
+		while(diff.size() != 0){
+			int curr = diff.poll();
+			if(result.add(curr)){
+				Iterator<Integer> itr = result.iterator();
+				while(itr.hasNext()){
+					if(!diff.contains(Math.abs(itr.next() - curr)){)
+						diff.add(Math.abs(itr.next() - curr));
+					}
+				}
+			}
+		}
+	}
+}

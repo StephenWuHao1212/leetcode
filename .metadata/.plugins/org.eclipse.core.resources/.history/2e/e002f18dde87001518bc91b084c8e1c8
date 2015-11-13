@@ -1,0 +1,38 @@
+/*
+
+a m by n matrix, print every paths from the left top corner to the right bottom corner
+only go down or right for every step
+
+
+backtracing
+helper(currentList, totalList, direction, row, col, matrix)
+if direction is true, go down
+else go right
+
+ */
+
+import java.util.*;
+public class Solution{
+	public static List<List<Integer>> printPaths(int[][] matrix){
+
+	}
+	// row and col is the current index
+	public void helper(LinkedList<Integer> currentList, LinkedList<List<Integer>> totalList, int row, int col, int[][] matrix){
+		currentList.add(matrix[row][col]);
+		if(row == matrix.length - 1 && col == matrix[0].length - 1) {
+			totalList.add(currentList);
+			return;
+		}
+		if(row != matrix.length - 1){
+			LinkedList<Integer> listDown = new LinkedList<Integer>();
+			listDown.addAll(currentList);
+			helper(listDown, totalList, row + 1, col, matrix);
+		}
+		if(col != matrix[0].length - 1){
+			LinkedList<Integer> listRight = new LinkedList<Integer>();
+			listRight.addAll(currentList);
+			helper(listRight, totalList, row + 1, col, matrix);
+		}
+
+	}
+}

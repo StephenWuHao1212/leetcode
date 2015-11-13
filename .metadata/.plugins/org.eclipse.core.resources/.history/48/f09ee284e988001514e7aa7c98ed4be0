@@ -1,0 +1,40 @@
+/*
+	return the index of the two minimum number in a unsorted array
+*/
+
+import java.util.*;
+import java.util.Map.Entry;
+public class Solution{
+	public static int[] minimumNumberInUnsortedArray(int[] nums){
+		//<number, index>
+		HashMap<Integer, LinkedList<Integer>> map = new HashMap<Integer, LinkedList<Integer>>();
+		for(int i = 0; i < nums.length; i++){
+			if(map.containsKey(nums[i])) map.get(nums[i]).add(i);
+			else{
+				LinkedList<Integer> list = new LinkedList<Integer>();
+				list.add(i);
+				map.put(nums[i], list);
+			}
+		}
+		Set<Entry<Integer, LinkedList<Integer>>> set = map.entrySet();
+		LinkedList<Entry<Integer, LinkedList<Integer>>> l = new LinkedList<Entry<Integer, LinkedList<Integer>>>();
+		l.addAll(set);
+		Collections.sort(l, new Comparator<Entry<Integer, LinkedList<Integer>>>(){
+			public int compare(Entry<Integer, LinkedList<Integer>> a, Entry<Integer, LinkedList<Integer>> b){
+				if(a.getKey() > b.getKey()) return -1;
+				else return 1;
+			}
+		});
+		int[] ans = new int[2];
+		int i = 0;
+		while(!l.get(0).getValue().isEmpty())
+			ans[i] = l.get(0).getValue().poll().intValue();
+		ans[1] = l.get(1).getKey().intValue();
+		return ans;
+	}
+	
+	public static void main(String[] args){
+		int[] num = {3,1,4,9,0,1,-1}
+		int[] test = minimumNumberInUnsortedArray()
+	}
+}

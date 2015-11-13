@@ -1,0 +1,28 @@
+/*
+	return the index of the two minimum number in a unsorted array
+*/
+
+import java.util.*;
+import java.util.Map.Entry;
+public class Solution{
+	public static int[] minimumNumberInUnsortedArray(int[] nums){
+		//<number, index>
+		HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
+		for(int i = 0; i < nums.length; i++){
+			if(map.containsKey(nums[i])) map.get(nums[i]).add(i);
+			else{
+				LinkedList<Integer> list = new LinkedList<Integer>();
+				list.add(i);
+				map.put(nums[i], list);
+			}
+		}
+		Set<Entry<Integer, List<Integer>>> set = map.entrySet();
+		LinkedList<Entry<Integer, List<Integer>>> l = new LinkedList<Entry<Integer, List<Integer>>>();
+		l.addAll(set);
+		Collections.sort(l, new Comparator<Entry<Integer, List<Integer>>>(){
+			public int compare(Entry<Integer, List<Integer>> a, Entry<Integer, List<Integer>> b){
+				
+			}
+		});
+	}
+}
